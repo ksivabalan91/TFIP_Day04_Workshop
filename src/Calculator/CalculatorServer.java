@@ -9,7 +9,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class CalculatorServer {
-
     public static void main(String[] args) throws IOException, EOFException{
         // create a server socket and listen to a specific port
 
@@ -20,7 +19,6 @@ public class CalculatorServer {
 
         //wait for a connection
         try{
-
             while(exit){
             System.out.println("Waiting for incoming connections");
             Socket conn = server.accept();
@@ -51,14 +49,11 @@ public class CalculatorServer {
                     
                     oos.writeUTF(input);
                     oos.flush();
-                    conn.close();
-                
+                    conn.close();                
+            }
+        } catch(IOException i){
+            System.err.println();
         }
-
-
-    }catch(IOException i){
-        System.err.println();
-    }
     
-}
+    }
 }
