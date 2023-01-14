@@ -16,7 +16,7 @@ public class CalculatorClient {
         Boolean exit = true;
 
         System.out.println("Connected to server on localhost: 6942");
-
+        
 
 
         while(exit){
