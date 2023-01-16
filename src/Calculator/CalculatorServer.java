@@ -34,14 +34,6 @@ public class CalculatorServer {
                     String input = ois.readUTF();
                     System.out.printf(">>> this is the eqn %s\n", input);
                     
-                    //apply method to string
-
-                    // if(input.contentEquals("exit")){
-                    //     conn.close();
-                    //     exit = false;
-                    //     continue;
-                    // }
-
                     input = operation.calculate(input);
 
                     OutputStream os = conn.getOutputStream();
